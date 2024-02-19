@@ -1,0 +1,66 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title class="title">
+      <h1>MyStockTracker</h1>
+    </ion-title>
+    <ion-buttons slot="end">
+      <ion-button color="primary" routerLink="/contactMe">
+        <ion-icon slot="icon-only" name="mail"></ion-icon>
+      </ion-button>
+      <ion-button color="primary" routerLink="/dashboardDirectAccess">
+        <ion-icon slot="icon-only" name="grid"></ion-icon>
+      </ion-button>
+      <ion-button color="primary" routerLink="/settings">
+        <ion-icon slot="icon-only" name="settings"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <div class="container mt-3">
+    <div class="row">
+      <div class="col-12">
+        <div class="summary">
+          <h2 class="mb-3">About MyStockTracker</h2>
+          <button (click)="testNotification()">Send notification 1</button><br>
+          <p>Investing for the long term often involves monitoring stock prices diligently, especially for
+            opportunities to buy more shares when prices decline. However, tracking stocks daily can be
+            time-consuming and challenging, particularly when aiming to capitalize on specific price drops,
+            such
+            as a 20% decrease.</p>
+          <p>Our platform aims to streamline this process and alleviate the burden of constant monitoring.
+            Imagine
+            wanting to purchase shares of a stock when it experiences a total of 20% drop in upcoming days,
+            but the stock's price
+            fluctuates daily, making it difficult to pinpoint the opportune moment.</p>
+          <p>Here's where our solution comes in: Upon subscribing to our service, users can effortlessly set
+            alerts for desired stock price drops. For instance, if you're interested in Reliance stock and
+            set
+            a
+            20% drop alert, our system will continuously monitor the stock's performance for you.</p>
+          <p>Instead of manually checking stock prices every day, our application will notify you via email
+            when
+            the stock reaches your predefined threshold. This allows you to stay informed and act decisively
+            without the hassle of constant vigilance.</p>
+
+          <h2 class="mt-4">Key Features</h2>
+          <ul class="feature-list">
+            <li>Customizable Alerts: Tailor alerts based on your specific investment criteria, whether it's
+              a
+              percentage drop, specific price point, or other parameters relevant to your strategy.</li>
+            <li>Portfolio Tracking: Keep track of your investments effortlessly with our portfolio tracking
+              tools, enabling you to monitor performance and make informed decisions.</li>
+            <li>User-Friendly Interface: Enjoy a user-friendly interface designed for seamless navigation
+              and
+              intuitive use, ensuring a smooth and enjoyable experience.</li>
+          </ul>
+
+          <p>Our mission is to empower long-term investors like you with the tools and information needed to
+            navigate the complexities of the stock market effectively. Join us today and take control of
+            your
+            financial future with confidence and convenience.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</ion-content>

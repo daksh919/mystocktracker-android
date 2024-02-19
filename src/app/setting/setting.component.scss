@@ -1,0 +1,29 @@
+.faq {
+    width: 100%;
+}
+
+.faq-item {
+    border: 1px solid #ccc;
+    margin-bottom: 20px;
+    padding: 10px;
+}
+
+.faq-question {
+    font-weight: bold;
+}
+
+.faq-photos {
+    display: flex;
+    overflow-x: auto;
+}
+
+.faq-photo {
+    flex: 0 0 auto;
+    margin-right: 10px;
+}
+
+.faq-photo img {
+    max-width: 100px;
+    /* Adjust as needed */
+    height: auto;
+}

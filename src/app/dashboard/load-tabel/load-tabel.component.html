@@ -1,0 +1,76 @@
+<ion-content>
+  <ion-refresher slot="fixed" (ionRefresh)="handleRefresh($event)">
+    <ion-refresher-content></ion-refresher-content>
+  </ion-refresher>
+  <ion-button color="primary" routerLink="/dashboardDirectAccess">Back</ion-button><br><br>
+  <div class="investment-details"><br><br>
+    <p>Total Amount Invested: <span id="totalInvestAmount">{{ showAmounts ? totalInvestAmount : '*****' }} Rs.</span>
+    </p>
+    <p>Current Amount: <span id="currentInvestedAmount">{{ showAmounts ? currentInvestedAmount : '*****' }}
+        Rs.</span></p>
+    <button (click)="toggleVisibility()" id="seeAmountButton">{{ checkBalance }}</button>
+  </div>
+  <div class="table-responsive">
+    <table border="1" class="table table-condensed">
+      <tbody>
+        <tr>
+          <th>Sr.No.</th>
+          <th (click)="toggleCurrentPriceSortOrder('stockName')">Stock Name
+            <span *ngIf="currentSortColumn === 'stockName'"
+              [class]="currentPriceSortOrder === 'asc' ? 'asc-indicator' : 'desc-indicator'"></span>
+          </th>
+          <th (click)="toggleCurrentPriceSortOrder('shares')">Shares
+            <span *ngIf="currentSortColumn === 'shares'"
+              [class]="currentPriceSortOrder === 'asc' ? 'asc-indicator' : 'desc-indicator'"></span>
+          </th>
+          <th (click)="toggleCurrentPriceSortOrder('boughtPrice')">Bought Price
+            <span *ngIf="currentSortColumn === 'boughtPrice'"
+              [class]="currentPriceSortOrder === 'asc' ? 'asc-indicator' : 'desc-indicator'"></span>
+          </th>
+          <th (click)="toggleCurrentPriceSortOrder('maxPrice')">Maximum Price
+            <span *ngIf="currentSortColumn === 'maxPrice'"
+              [class]="currentPriceSortOrder === 'asc' ? 'asc-indicator' : 'desc-indicator'"></span>
+          </th>
+          <th (click)="toggleCurrentPriceSortOrder('currentPrice')">Current Price
+            <span *ngIf="currentSortColumn === 'currentPrice'"
+              [class]="currentPriceSortOrder === 'asc' ? 'asc-indicator' : 'desc-indicator'"></span>
+          </th>
+          <th (click)="toggleCurrentPriceSortOrder('totalProfitLoss')">Total Profit/Loss
+            <span *ngIf="currentSortColumn === 'totalProfitLoss'"
+              [class]="currentPriceSortOrder === 'asc' ? 'desc-indicator' : 'asc-indicator'"></span>
+          </th>
+          <th (click)="toggleCurrentPriceSortOrder('perentage')">%age away
+            <span *ngIf="currentSortColumn === 'perentage'"
+              [class]="currentPriceSortOrder === 'asc' ? 'asc-indicator' : 'desc-indicator'"></span>
+          </th>
+          <th>Buy Shares</th>
+          <th>Delete Stock</th>
+        </tr>
+        <tr *ngFor="let stock of stockList; let i = index" id="centreDisplay">
+          <td>{{ i + 1 }}</td>
+          <td>{{ stock.symbol }}</td>
+          <td>{{ stock.noOfShares }}</td>
+          <td>{{ stock.boughtPrice }}</td>
+          <td>{{ stock.maximumPrice }}</td>
+          <td>{{ stock.currentPrice }} </td>
+          <td>{{ stock.totalProfit }} </td>
+          <td [ngClass]="{'warning-row': stock.percentage !== undefined && stock.percentage < -7}">{{ stock.percentage
+            }}
+          </td>
+          <td class="button-cell">
+
+            <!--  <button (click)="boughtShareProcess(stock.symbol, i)" [class.clicked]="isRowClicked(i)"
+            [disabled]="isButtonDisabled(stock.percentage)">Buy Shares</button>  -->
+
+            <button (click)="boughtShareProcess(stock.symbol, i)" [class.clicked]="isRowClicked(i)">Buy Shares</button>
+          </td>
+          <td class="button-cellDelete"> <button (click)="deleteStock(stock.symbol, i)">Delete</button></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <button (click)="checkHistory()" class="custom-button">{{ showHistory }}</button>
+  <div *ngFor="let history of historyOfStocks;">
+    <li>{{ history }}</li>
+  </div>
+</ion-content>

@@ -1,0 +1,7 @@
+<button #myButton (click)="dataHasBeenLoaded()" [hidden]="hideLoadButton">Load complete</button>
+<div *ngIf="noDataPresent">
+  <p>Please add some stock to start tracking</p>
+</div>
+<ng-container *ngIf="dataLoaded">
+  <app-load-tabel></app-load-tabel>
+</ng-container>

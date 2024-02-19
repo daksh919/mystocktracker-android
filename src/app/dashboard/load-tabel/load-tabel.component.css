@@ -1,0 +1,117 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f5f5f5;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+  }
+  
+  .investment-details {
+    display: inline-block;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .investment-details p {
+    margin: 8px 0;
+  }
+  
+  #centreDisplay {
+    text-align: center;
+  }
+  
+  .asc-indicator::before {
+    content: ' ▲';
+    color: green;
+  }
+  
+  .desc-indicator::before {
+    content: ' ▼';
+    color: red;
+  }
+  
+  
+  table {
+    width: 75%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    font-family: 'Arial', sans-serif;
+    border: 1px solid #ddd;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  th,
+  td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  th {
+    background-color: #f2f2f2;
+  }
+  
+  tr:hover {
+    background-color: #f5f5f5;
+  }
+  
+  #seeAmountButton {
+    background-color: #3498db;
+    color: #fff;
+    padding: 3px 10px;
+    font-size: 14px;
+    border: 1px solid #2980b9;
+    border-radius: 5px;
+  }
+  
+  #seeAmountButton:hover {
+    background-color: #2980b9;
+    color: #fff;
+    border-color: #3498db;
+  }
+  
+  .button-cell button {
+    padding: 8px 12px;
+    cursor: pointer;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+  }
+  
+  .button-cellDelete button {
+    padding: 8px 12px;
+    cursor: pointer;
+    background-color: rgb(247, 4, 4);
+    color: white;
+    border: none;
+    border-radius: 4px;
+  }
+
+  .button-cellDelete button:hover {
+    background-color: rgb(208, 29, 29);
+  }
+  
+  .button-cell button:hover {
+    background-color: #45a049;
+  }
+  
+  .button-cell button:disabled {
+    cursor: not-allowed;
+    opacity: 0.6;
+  }
+  
+  .button-cell button:disabled:hover {
+    background-color: #45a049;
+  }
+  
+  .warning-row {
+    font-size: 16px;
+    color: red
+  }
+  

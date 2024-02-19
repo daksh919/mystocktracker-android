@@ -1,0 +1,73 @@
+.search-input {
+    padding: 8px 12px;
+    border: 2px solid #007bff;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+  
+  .search-button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 8px 16px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  .search-button:hover {
+    background-color: #0056b3;
+    /* Darker shade of blue */
+  }
+  
+  .checkbox {
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #007bff;
+    border-radius: 3px;
+    margin-right: 10px;
+    vertical-align: middle;
+    cursor: pointer;
+  }
+  
+  .checkbox:checked {
+    background-color: #007bff;
+  }
+  
+  .checkbox-label {
+    font-size: 16px;
+    vertical-align: middle;
+  }
+  
+  .refresh-button {
+    background-color: #28a745;
+    /* Green color */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 8px 16px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  .refresh-button:hover {
+    background-color: #218838;
+    /* Darker shade of green */
+  }
+  
+  .signout-button {
+    background-color: #dc3545;
+    /* Red color */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 8px 16px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  .signout-button:hover {
+    background-color: #c82333;
+    /* Darker shade of red */
+  }

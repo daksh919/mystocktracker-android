@@ -1,0 +1,15 @@
+<div class="modal-content">
+    <p> You are buying {{ stockSymbol }} at price {{ priceAtBoughtShare }}</p>
+    <p>Please enter number of shares you want to buy</p>
+    <input type="number" name="sharesBought" [(ngModel)]="sharesBought" autocomplete="off" />
+    <p>Enter the price you want to buy the shares</p>
+    <input type="text" name="priceAtBoughtShare" [(ngModel)]="priceAtBoughtShare" autocomplete="off" />
+
+
+    <!-- <input type="text" placeholder="Datepicker" class="form-control" bsDatepicker> -->
+
+<div class="button-container">
+    <button mat-raised-button (click)="submit()" [disabled]="isSubmitDisabled()">Submit</button>
+    <button mat-raised-button (click)="close()">Close</button>
+</div>
+</div>
